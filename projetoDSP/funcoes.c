@@ -1,4 +1,17 @@
-#include "funcoes.h"
+#include <stdio.h>
+#include <string.h>
+
+
+#define STB_IMAGE_IMPLEMENTATION
+#include "uwimg/stb_image.h"
+#define STB_IMAGE_WRITE_IMPLEMENTATION
+#include "uwimg/stb_image_write.h"
+#include <cycles.h>
+
+typedef struct{
+    int w,h,c;           // largura x altura x canais
+    unsigned char *data; // vetor de pixels
+} Imagem;
 
 Imagem carrega_imagem (const char *caminho, int num_canais)
 {
@@ -91,12 +104,16 @@ unsigned char get_pixel(Imagem im, int x, int y, int c)
 Imagem convolve (Imagem im, char *kernel, int kernel_size)
 {
     Imagem resultado = cria_imagem(im.w, im.h, 1);
+    cycle_stats_t stats;
+    // inicializando a estrutura de cycles
+  	CYCLES_INIT(stats);
 	
     // ==============
     short new_pix = 0;
     
     unsigned short i, j, x,  y;
-
+    
+    CYCLES_START(stats);
     // caminha pelas colunas
     for(i = 0; i < im.w; i++)
     {
@@ -130,33 +147,9 @@ Imagem convolve (Imagem im, char *kernel, int kernel_size)
         }
        
     }
+    CYCLES_STOP(stats);
     // ==============
+    CYCLES_PRINT(stats);
 	
     return resultado;
-}
-
-void faz(){
-	Imagem im = carrega_imagem("..\\data\\helens4.jpg", 1);
-    
-    // cria kernel do filtro de LAPLACE
-    char laplace[3*3] = {0,1,0,1,-4,1,0,1,0};
-
-    // cria kernel do filtro de Sobel vertical
-    char sobel_v[3*3] = {1,0,-1,2,0,-2,1,0,-1};
-
-    // cria kernel do filtro de Sobel horizontal
-    char sobel_h[3*3] = {1,2,1,0,0,0,-1,-2,-1};
-
-	
-    // cria imagem para armazenar o resultado
-    Imagem im2;
-    
-    // convolve com o filtro especificado
-    im2 = convolve(im, sobel_h, 3);
-    
-    // salva imagem criada
-    salva_imagem("..\\resultado", im2, 1);
-    
-    libera_image(im);
-    libera_image(im2);
 }
