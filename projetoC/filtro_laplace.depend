@@ -1,0 +1,98 @@
+# depslib dependency file v1.0
+1606860670 source:c:\users\user\desktop\univali\pds\trabalho_final\filtro_laplace\uwimg\load_image.c
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+	"stb_image.h"
+	"stb_image_write.h"
+
+1606910505 c:\users\user\desktop\univali\pds\trabalho_final\filtro_laplace\uwimg\image.h
+	<stdio.h>
+	"matrix.h"
+
+1576514822 c:\users\user\desktop\univali\pds\trabalho_final\filtro_laplace\uwimg\matrix.h
+
+1576514822 c:\users\user\desktop\univali\pds\trabalho_final\filtro_laplace\uwimg\stb_image.h
+	"stb_image.h"
+	<stdio.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+	<math.h>
+	<stdio.h>
+	<assert.h>
+	<stdint.h>
+	<emmintrin.h>
+	<intrin.h>
+	<arm_neon.h>
+
+1576514822 c:\users\user\desktop\univali\pds\trabalho_final\filtro_laplace\uwimg\stb_image_write.h
+	<stdio.h>
+	<stdarg.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<assert.h>
+
+1576514822 source:c:\users\user\desktop\univali\pds\trabalho_final\filtro_laplace\uwimg\matrix.c
+	"matrix.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<math.h>
+
+1606932844 source:c:\users\user\desktop\univali\pds\trabalho_final\filtro_laplace\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<math.h>
+	"uwimg/stb_image.h"
+	"uwimg/stb_image_write.h"
+
+1576514822 source:c:\users\user\desktop\univali\image_processing_on_dsp\projetoc\uwimg\matrix.c
+	"matrix.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<math.h>
+
+1576514822 c:\users\user\desktop\univali\image_processing_on_dsp\projetoc\uwimg\matrix.h
+
+1607800254 source:c:\users\user\desktop\univali\image_processing_on_dsp\projetoc\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<math.h>
+	"uwimg/stb_image.h"
+	"uwimg/stb_image_write.h"
+
+1576514822 c:\users\user\desktop\univali\image_processing_on_dsp\projetoc\uwimg\stb_image.h
+	"stb_image.h"
+	<stdio.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+	<math.h>
+	<stdio.h>
+	<assert.h>
+	<stdint.h>
+	<emmintrin.h>
+	<intrin.h>
+	<arm_neon.h>
+
+1576514822 c:\users\user\desktop\univali\image_processing_on_dsp\projetoc\uwimg\stb_image_write.h
+	<stdio.h>
+	<stdarg.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<assert.h>
+
